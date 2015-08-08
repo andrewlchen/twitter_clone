@@ -5,7 +5,7 @@ RSpec.feature "Static Pages", :type => :feature do
   describe "#home" do
     scenario "Visiting the Home page contains the Home title" do
       visit "/"
-      expect(page).to have_selector("title", :text => "Home | Rails Tutorial Twitter Clone", visible: false)
+      expect(page).to have_selector("title", :text => "Rails Tutorial Twitter Clone", visible: false)
     end 
   end
 
