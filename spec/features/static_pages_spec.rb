@@ -11,15 +11,22 @@ RSpec.feature "Static Pages", :type => :feature do
 
   describe "#help" do
     scenario "Visiting the Help page contains the Help title" do
-      visit "/static_pages/help/"
+      visit "/help/"
       expect(page).to have_selector("title", :text => "Help | Rails Tutorial Twitter Clone", visible: false)
     end 
   end
 
   describe "#about" do
     scenario "Visiting the About page contains the About title" do
-      visit "/static_pages/about/"
+      visit "/about/"
       expect(page).to have_selector("title", :text => "About | Rails Tutorial Twitter Clone", visible: false)
+    end 
+  end
+
+  describe "#contact" do
+    scenario "Visiting the Contact page contains the Contact title" do
+      visit "/contact/"
+      expect(page).to have_selector("title", :text => "Contact | Rails Tutorial Twitter Clone", visible: false)
     end 
   end
 
